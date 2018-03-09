@@ -7,7 +7,7 @@ body{
 }
 .page{
 	width: 1281px;
-	height: 4555px;
+	/*height: 4555px;*/
 	border:1px solid black;
 	margin:0 auto;
 }
@@ -455,7 +455,7 @@ body{
 .main_8{
 	height: 750px;
 	width: 100%;
-	border:1px solid black;
+	/*border:1px solid black;*/
 }
 .main_8 .top_Col{
 	width: 100%;
@@ -464,7 +464,7 @@ body{
 	overflow: hidden;
 }
 .top_Col > p:nth-child(1){
-	margin-top: 30px;
+	margin-top: 119px;
 	font-family: SimHei;
 	font-size: 21px;
 }
@@ -483,35 +483,166 @@ body{
 	width: 100%;
 	height: 300px;
 	display: flex;
+	margin-top: 105px;
 }
 .bottom_Col .bottom_left{
 	width: 500px;
 	height: 100%;
 	flex:1;
-	background-color: blue;
+
+	/*background-color: blue;*/
 }
-.bottom_Col .bottom_right{
-	width: 780px;
-	height: 100%;
-	flex:2;	
-	background-color: yellow;
-}
-.bottom_right .textArea{
-	float:right;
+
+.bottom_left .textArea{
 	color:black;
 	font-size: 12px;
-	font-family: SimSun;
+	font-family: SimHei;
+	/*border:1px solid black;*/
+	margin-left: 138px;
+	width:288px;
+	height: 100%;
+}
+.textArea > p:nth-child(1){
+	font-size: 14px;
+	opacity: 0.8;
 }
 .textArea > p:nth-child(2){
 	margin-top: 30px;
+	opacity: 0.6;
+}
+.textArea > p:nth-child(4){
+	margin-top:70px;
+	font-size: 14px;
+	opacity: 0.8;
+}
+ .textArea > p:nth-child(7){
+ 	margin-top:50px;
+	font-size: 14px;
+	opacity: 0.8;
+ }
+.textArea > p:nth-child(5){
+	margin-top: 30px;
+	opacity: 0.6;
 }
 .textArea .more{
 	float: right;
 	position: relative;
 	right: 10px;
+	font-family: SimSun;
+	font-size: 12px;
+	opacity: 0.6;
 
 }
 .textArea .more img,.more p{
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.bottom_Col .bottom_right{
+	height: 100%;
+	flex:2;	
+	margin-left: 75px;
+	/*background-color: yellow;*/
+}
+.bottom_right div{
+	background-color: #ededef;
+	width:300px;
+	height: 40px;
+	margin-right:20px;
+	margin-bottom: 20px;
+	font:SimSun;
+	font-size: 12px;
+	color: #231815;
+	padding-left: 10px;
+}
+.bottom_right p{
+	opacity: 0.8;
+}
+#name,#age,#phone,#address{
+	display: inline-flex;
+	align-items: center;
+}
+#intro{
+	width: 632px;
+	height: 110px;
+	padding-left: 10px;
+	padding-top:10px;
+}
+#submit{
+	width: 642px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-family: SimHei;
+}
+.main_9{
+	width: 100%;
+	height: 359px;
+	background-color: #32353e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main_9 .Container{
+	width: 514px;
+	height: 205px;
+	/*border:1px solid red;*/
+	text-align: center;
+}
+.main_9 .Container p:nth-child(1){
+	font-size: 21px;
+	font-family: HeiTi;
+	color: white;
+}
+.main_9 .Container p:nth-child(2){
+	font-family: SimSun;
+	font-size: 12px;
+	color: white;
+	width: 92%;
+	margin:0 auto;
+	margin-top: 10px;
+	line-height: 1.8;
+	margin-bottom: 20px;
+}
+.main_9 .Container input{
+	width: 432px;
+	height: 40px;
+	font-size: 14px;
+	display: inline-block;
+	border:0;
+}
+.main_9 .Container .button{
+	margin-left: -5px;
+	height: 40px;
+	width: 77px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #6f7178;
+	vertical-align:top;
+	font-size: 15px;
+	color: white;
+}
+.main_9 .Container img{
+	width: 35px;
+	height: 35px;
+	margin-top: 37px;
+	margin-right: 25px;
+}
+.footer{
+	width: 100%;
+	height: 62px;
+	background-color: #2f3038;
+	display: flex;
+	align-items: center;
+	font-family: simSun;
+	font-size: 12px;
+	color: white;
+}
+.footer > p:nth-child(1){
+	margin-left: 100px;
+}
+.footer > p:nth-child(2){
+	margin-left: 1000px;
 }
