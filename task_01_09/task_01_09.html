@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- MyCss -->
+    <link rel="stylesheet" href="CSS.css">
+	<title>task_01_09</title>
+</head>
+<body>
+	<div class='page'>
+		<div class="header">
+			<img src="logo.png" id="logo">
+			<!-- <label><img src="icon_3.png" for="search"></label> -->
+			<input type="text" name="search" class="form-control">
+			<img src="login.png" id="icon">
+			<p>登录</p>
+		</div>
+		<div class="left_Col">
+			<div class='left_P1'>
+				<img src="round.png">
+				<p>ABC123</p>
+			</div>
+			<div class="left_P2">
+				<div class="save">
+					<p>110</p>
+					<p>收藏</p>
+				</div>
+				<div class="follow">
+					<p>313</p>
+					<p>粉丝</p>
+				</div>
+			</div>
+			<div class="left_P3">
+				<div style="background:url(icon_11.png) no-repeat left center;background-size: 10px;">个人报表</div>
+				<div style="background:url(icon_2.png) no-repeat left center;background-size: 10px;">文件一</div>
+				<div style="background:url(icon_2-5.png) no-repeat left center;background-size: 10px;">文件二</div>
+				<div style="background:url(icon_3.png) no-repeat left center;background-size: 10px;">文档1</div>
+				<div style="background:url(icon_5.png) no-repeat left center;background-size: 10px;">文档2</div>
+				<div style="background:url(icon_2.png) no-repeat left center;background-size: 10px;">文件三</div>
+			</div>
+			<div class="left_P4">
+				<div style="background:url(star.png) no-repeat left center;background-size: 10px;">个人收藏</div>
+				<div style="background:url(star.png) no-repeat left center;background-size: 10px;">我的分享</div>
+				<div style="background:url(star.png) no-repeat left center;background-size: 10px;">图库</div>
+				<div style="background:url(star.png) no-repeat left center;background-size: 10px;">成长记录</div>
+				<div style="background:url(star.png) no-repeat left center;background-size: 10px;">账户信息</div>
+			</div>
+		</div>
+		<div class="right_Col">
+			<div class="right_navi">
+				<p>C站 / 个人报表 / 文件一 / <span>文档一</span></p>
+			</div><!-- navigation ends -->
+			<div class="search">
+				<form>
+					<label>查询项</label>
+					<select>
+						<option style="color:red;">第一项</option>
+						<option>第二项</option>
+					</select>
+				</form>
+				<div class="two_Col">
+					<form>
+						<label>买方</label>
+						<select style="width: 120px">
+							<option>小A</option>
+							<option>小B</option>
+							<option>小C</option>
+						</select>
+					</form>
+					<form>
+						<label>卖方</label>
+						<select style="width: 120px">
+							<option >小C</option>
+							<option >小B</option>
+							<option>小A</option>
+						</select>
+					</form>
+				</div>
+				<a href="#"><img src="exchange.png" id="exchange"></a>
+				<div class="two_Col">
+					<form>
+						<label>日期</label>
+						<select style="width: 120px">
+							<option>2016-04-01</option>
+							<option>2016-04-02</option>
+						</select>
+						<label style="margin-left: 10px;">总耗时</label>
+						<select>
+							<option>2016-04-01</option>
+							<option >2016-04-02</option>
+						</select>
+					</form>
+					<form>
+						<label>人数</label>
+						<select>
+							<option>10人</option>
+							<option>11人</option>
+						</select>
+						<label style="margin-left: 10px;">成交项</label>
+						<select style="width: 120px">
+							<option>10项</option>
+							<option>11项</option>
+						</select>
+					</form>
+				</div>
+				<button>搜索</button>
+			</div><!-- search ends -->
+			<div class='history'>
+				<div class="left_Arrow">
+					<img src="arrow.png">
+				</div>
+				<div>
+					<div class="board-wrap">
+						<p style="color: black;margin-bottom: 5px;">10:00 am</p>
+						<img src="money.png">
+						<p class="money">2100</p>
+					</div>	
+				</div>
+				<div>
+					<div class="board-wrap">
+						<p style="color: black;margin-bottom: 5px;">11:00 am</p>
+						<img src="money.png">
+						<p class="money">1300</p>
+					</div>	
+				</div>
+				<div>
+					<div class="board-wrap">
+						<p style="color: black;margin-bottom: 5px;">12:00 am</p>
+						<img src="money.png">
+						<p class="money">1200</p>
+					</div>	
+				</div>
+				<div>
+					<div class="board-wrap">
+						<p style="color: black;margin-bottom: 5px;">01:00 pm</p>
+						<img src="money.png">
+						<p class="money">1400</p>
+					</div>	
+				</div>
+				<div>
+					<div class="board-wrap">
+						<p style="color: black;margin-bottom: 5px;">02:00 pm</p>
+						<img src="money.png">
+						<p class="money">1500</p>
+					</div>	
+				</div>
+				<div>
+					<div class="board-wrap">
+						<p style="color: black;margin-bottom: 5px;">03:00 pm</p>
+						<img src="money.png">
+						<p class="money">1800</p>
+					</div>	
+				</div>
+				<div class="right_Arrow">
+					<img src="arrow.png">
+				</div>
+				<div>
+					<img src="calender.png">
+					<p style="color:#535353;margin-left: 10px">历史查询</p>
+				</div>
+			</div><!-- history ends --> 
+			<p style="color:#323333;margin-left: 65px;margin-top:20px;">2016年4月份统计</p>
+			<div class="statistic">
+				<div style="border-left:3px solid #43b29e;margin-right: 30px;">
+					<div class="stat-wrapper">
+						<p>133311</p>
+						<p style="color:#aaaaaa;font-size:10px;margin-top: 5px;">成交量</p>
+					</div>
+					<div class="greenColor"></div>
+				</div>
+				<div style="border-left:3px solid #388ac1;margin-right: 30px;">
+					<div class="stat-wrapper">
+						<p>133311</p>
+						<p style="color:#aaaaaa;font-size:10px;margin-top: 5px;">成交量</p>
+					</div>
+					<div class="blueColor"></div>
+				</div>
+				<div style="border-left:3px solid #d04a36;margin-right: 30px;">
+					<div class="stat-wrapper">
+						<p>133311</p>
+						<p style="color:#aaaaaa;font-size:10px;margin-top: 5px;">成交量</p>
+					</div>
+					<div class="redColor"></div>
+				</div>
+				<div style="border-left:3px solid #e2cd46;">
+					<div class="stat-wrapper">
+						<p>133311</p>
+						<p style="color:#aaaaaa;font-size:10px;margin-top: 5px;">成交量</p>
+					</div>
+					<div class="yellowColor"></div>
+				</div>
+			</div><!-- statistic ends here -->
+			<div class="panel panel-default left_panel">
+			    <div class="panel-heading" >
+			        <p>第一组项目</p>
+			    </div>
+			    <div class="panel-body">
+		    		<ul class="nav nav-tabs">
+			        	<li class='active'><a href="#" data-toggle="tab" style="background-color: white;">项目一</a></li>
+			        	<li><a href="#" data-toggle="tab">项目二</a></li>
+			        	<li><a href="#" data-toggle="tab">项目三</a></li>
+			        	<li><a href="#" data-toggle="tab">项目四</a></li>
+			        	<li><a href="#" data-toggle="tab">项目五</a></li>
+			        </ul>
+			        <div class="grid_Form">
+			        	<table>
+		        			<tr>
+		        				<td style='background-color: #f3f5f6;'>购买材料一</td>
+		        				<td>购买材料一</td>
+		        				<td>购买材料一</td>
+		        				<td>购买材料一</td>
+		        			</tr>
+		        			<tr>
+		        				<td>购买材料二</td>
+		        				<td>购买材料二</td>
+		        				<td>购买材料二</td>
+		        				<td>购买材料二</td>
+		        			</tr>
+		        			<tr>
+		        				<td>购买材料四</td>
+		        				<td>购买材料四</td>
+		        				<td>购买材料四</td>
+		        				<td>购买材料四</td>
+		        			</tr>
+		        			<tr>
+		        				<td>购买材料六</td>
+		        				<td>购买材料六</td>
+		        				<td>购买材料六</td>
+		        				<td>购买材料六</td>
+		        			</tr>
+		        			<tr>
+		        				<td>购买材料十三</td>
+		        				<td>购买材料十三</td>
+		        				<td>购买材料十三</td>
+		        				<td>购买材料十三</td>
+		        			</tr>
+		        			<tr>
+		        				<td>购买材料二十</td>
+		        				<td>购买材料二十</td>
+		        				<td>购买材料二十</td>
+		        				<td>购买材料二十</td>
+		        			</tr>
+			        	</table>
+			        </div>
+			    </div>
+			</div>
+			<div class="panel panel-default right_panel">
+			    <div class="panel-heading" >
+			        <p>第二组项目</p>
+			    </div>
+			    <div class="panel-body details">
+			        <p>标题</p>
+			        <p style="color:#535353">项目报表三</p>
+			        <div>
+			        	<p>价格</p>
+			        	<p style="color:#535353">￥158</p>
+			        </div>
+			        <div>
+			        	<p>负责人</p>
+			        	<p style="color:#535353">小A</p>
+			        </div>
+			        <div>
+			        	<p>详细描述</p>
+				        <p style="color:#535353">该项目的负责人是.....</p>
+			        </div>
+			        <div>
+			        	<input type="checkbox" name="" checked>&nbsp;遵守保密协议
+			        	<button class='btn btn-primary'>搜索</button>
+			        </div>
+			    </div>
+			</div><!-- project ends -->
+			<div class="panel panel-default calender">
+				<div class="panel-heading">
+					<p>日历</p>
+				</div>
+				<div class="panel-body">
+					<div class="date-container">
+						<select style="height: 20px;width: 60px;">
+							<option>2016年</option>
+						</select>
+						<select style="height: 20px;width: 65px;padding-left: 20px;margin-right: 0px;">
+							<option>4月</option>
+						</select>
+						<div style="margin-right: 7px;">
+							<img src="arrow.png">
+						</div>
+						<select style="height: 20px;width: 75px;">
+							<option>标注日期</option>
+						</select>
+						<div style="height: 20px;width: 65px;"><a href="#" style="text-decoration: none;color:black">返回今天</a></div>
+					</div>
+					<table>
+						<tr class='date'>
+							<td>一</td>
+							<td>二</td>
+							<td>三</td>
+							<td>四</td>
+							<td>五</td>
+							<td>六</td>
+							<td>日</td>
+						</tr>
+						<tr class="number">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<p>1</p>
+								<p style="color:red">愚人节</p>
+							</td>
+							<td>
+								<p style="color:red">2</p>
+								<p>廿五</p>
+							</td>
+							<td>
+								<p style="color:red">3</p>
+								<p>廿六</p>
+							</td>
+						</tr>
+						<tr class="number">
+							<td>
+								<p>4</p>
+								<p>廿七</p>
+							</td>
+							<td>
+								<p>5</p>
+								<p style="color:red">清明</p>
+							</td>
+							<td>
+								<p>6</p>
+								<p>廿九</p>
+							</td>
+							<td>
+								<p>7</p>
+								<p>三月</p>
+							</td>
+							<td>
+								<p>8</p>
+								<p>初二</p>
+							</td>
+							<td style="border:1px solid #f8d564">
+								<p style="color:red">9</p>
+								<p>初三</p>
+							</td>
+							<td>
+								<p style="color:red">10</p>
+								<p>初四</p>
+							</td>
+						</tr>
+						<tr class="number">
+							<td>
+								<p>11</p>
+								<p>初五</p>
+							</td>
+							<td  style="border:1px solid #f8d564">
+								<p>12</p>
+								<p>初六</p>
+							</td>
+							<td>
+								<p>13</p>
+								<p>初七</p>
+							</td>
+							<td>
+								<p>14</p>
+								<p>初八</p>
+							</td>
+							<td>
+								<p>15</p>
+								<p>初九</p>
+							</td>
+							<td>
+								<p style="color:red">16</p>
+								<p>初十</p>
+							</td>
+							<td>
+								<p style="color:red">17</p>
+								<p>十一</p>
+							</td>
+						</tr>
+						<tr class="number">
+							<td>
+								<p>18</p>
+								<p>十二</p>
+							</td>
+							<td  style="border:1px solid #f8d564">
+								<p>19</p>
+								<p>十三</p>
+							</td>
+							<td>
+								<p>20</p>
+								<p>十四</p>
+							</td>
+							<td>
+								<p>21</p>
+								<p>十五</p>
+							</td>
+							<td>
+								<p>22</p>
+								<p>十六</p>
+							</td>
+							<td>
+								<p style="color:red">23</p>
+								<p>十七</p>
+							</td>
+							<td>
+								<p style="color:red">24</p>
+								<p>十八</p>
+							</td>
+						</tr>
+						<tr class="number">
+							<td>
+								<p>25</p>
+								<p>十九</p>
+							</td>
+							<td>
+								<p>26</p>
+								<p>廿十</p>
+							</td>
+							<td>
+								<p>27</p>
+								<p>廿一</p>
+							</td>
+							<td>
+								<p>28</p>
+								<p>廿二</p>
+							</td>
+							<td>
+								<p>29</p>
+								<p>廿三</p>
+							</td>
+							<td>
+								<p>30</p>
+								<p>廿四</p>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div><!-- calender ends -->
+			<div class="panel panel-default rank">
+				<div class="panel-heading">
+					<p>汽车行业品牌榜</p>
+				</div>
+				<div class="panel-body">
+					<table id="bar">
+						<tr class="rank-top">
+							<td style="width: 65px; text-align: center;">排名</td>
+							<td style="width: 90px; text-align: center;">品牌</td>
+							<td style="width: 250px;">搜索指数</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>大众</td>
+							<td>48912001</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div><!-- right colume ends -->
+	</div>
+
+</body>
+</html>

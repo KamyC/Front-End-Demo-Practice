@@ -1,0 +1,484 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+p{
+	margin:0px;
+}
+.page{
+	background-color: #eeeeed;
+	width: 1280px;
+	height: 1266px;
+	margin:0 auto;
+}
+.header{
+	width: 100%;
+	height:55px;
+	background-color: #2289bf;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.header #logo{
+	width: 40px;height: 40px;
+	margin-left: 50px;
+}
+
+.form-control{
+	height: 30px;
+	width: 315px;
+	border-radius: 15px;
+	margin-left:725px;
+}
+.header #icon{
+	width: 20px;height: 20px;
+	margin-left: 20px;	
+}
+.header p{
+	line-height: 0px;
+	font-family: SimHei;
+	font-size: 12px;
+	color: white;
+	margin:0px;
+	margin-left: 5px;
+}
+.left_Col{
+	background-color: #2a2d3d;
+	width: 260px;
+	height: 1216px;
+	float: left;
+}
+.left_P1{
+	display: flex;
+	align-items:center;
+	font-family: SimHei;
+	font-size: 16px;
+	color:#f6f5f5;
+	justify-content: center;
+	height: 100px;
+}
+
+.left_P1 > p{
+	margin-left: 20px;
+}
+.left_P2{
+	height: 55px;
+	width: 100%;
+	color:#6e8095;
+	display: flex;
+	justify-content: center;
+}
+.left_P2 > .save{
+	display: inline-block;
+	border-right: 0.5px solid #6e8095;
+	height: 40px;
+}
+.save > p{
+	margin-right: 30px;
+}
+.left_P2 > .follow{
+	display: inline-block;
+}
+.follow > p{
+	margin-left: 30px;
+}
+.save > p:nth-child(1), .follow > p:nth-child(1){
+	font-family: SimHei;
+	font-size: 16px;
+}
+.save > p:nth-child(2), .follow > p:nth-child(2){
+	font-family: SimSun;
+	font-size: 12px;
+}
+.left_P3{
+	width: 100%;
+	background-color: #383d4e;
+	overflow: hidden;
+}
+
+.left_P3 > div{
+	margin-top:15px;
+	font-size: 12px;
+	font-family: SimHei;
+	color: white;
+	padding-left: 20px;
+	margin-left:60px;
+}
+
+.left_P3 > div:nth-child(2){
+	margin-left: 90px;
+	color: #6e8095;
+}
+.left_P3 > div:nth-child(3){
+	margin-left: 90px;
+}
+.left_P3 > div:nth-child(4){
+	margin-left: 110px;
+}
+.left_P3 > div:nth-child(5){
+	margin-left: 110px;
+	color: #6e8095;
+}
+.left_P3 > div:nth-child(6){
+	margin-left: 90px;
+	color: #6e8095;
+	margin-bottom: 10px;
+}
+
+.left_P4{
+	width: 100%;
+	overflow: hidden;
+}
+.left_P4 > div{
+	margin-top:35px;
+	font-size: 12px;
+	font-family: SimHei;
+	color: #6e8095;
+	padding-left: 20px;
+	margin-left:60px;
+}
+.left_P4 > div:nth-child(1){
+	margin-top: 10px;
+}
+
+
+/*right colume*/
+.right_Col{
+	height: 1216px;
+	width: 1020px;
+	float: left;
+	border:2px solid black;
+	font-family: SimHei;
+	font-size: 12px;
+	color: #aaaaaa;
+}
+/*right-navigation*/
+.right_navi{
+	width: 100%;
+	background-color: white;
+	font-size: 12.28px;
+	font-family: SimHei;
+	height: 40px;
+	display: flex;
+	align-items: center;	
+}
+.right_navi span{
+	color:#6898c2;
+}
+.right_navi p{
+	margin-bottom: 0px;
+	margin-left: 40px;
+}
+
+
+.right_Col .search, .right_Col .history, .right_Col .statistic{
+	width: 890px;
+	background-color: white;
+	height: 85px;
+	margin:0 auto;
+	margin-top:20px;
+	display: flex;
+	align-items: center;
+}
+
+/*search*/
+.search{
+	color:black;
+}
+.search label{
+	color:#aaaaaa;
+}
+.search form{
+	margin-left: 30px;
+}
+.search form label{
+	margin-right: 5px;
+}
+.search form select{
+	height: 25px;
+	width: 70px;
+	font-family: SimHei;
+	padding-left: 5px;
+}
+.search .two_Col form:nth-child(2){
+	margin-top: 1px;
+}
+#exchange{
+	width: 25px;
+	height: 35px;
+}
+.search > button{
+	background-color: #388ac1;
+	font-family: SimHei;
+	font-size: 12px;
+	color: white;
+	width: 50px;height: 25px;
+	border-radius: 3px;
+	margin-left: 30px;
+	border:0;
+}
+/*history*/
+.right_Col > .history{
+	background-color: #eeeeed;
+	height: 65px;
+}
+.history > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background-color: white;
+	width: 110px;
+	margin-right: 5px;
+}
+.history > div:nth-child(2){
+	border-top: 2px solid #4388c8;
+}
+.history > .left_Arrow,.history > .right_Arrow{
+	width: 30px;
+}
+.history img{
+	display: inline-block;
+}
+.history .board-wrap{
+	margin-top: -5px;
+}
+.money{
+	font-size:21px;
+	display: inline-block;
+	color: #ec6500;
+	vertical-align: bottom;
+	line-height: 20px;
+	margin-left: -5px;
+}
+.history > .right_Arrow > img{
+	transform: rotateY(180deg);
+}
+.history > div:nth-child(9){
+	margin-right: 0px;
+	width: 130px;
+}
+/*statistic*/
+.right_Col > .statistic{
+	height: 70px;
+	background-color: #eeeeed;
+	margin-top: 0px;
+}
+.statistic > div{
+	width: 200px;
+	height: 100%;
+	background-color: white;
+	font-size: 12px;
+	color: #323333;
+	display: flex;
+	align-items: center;
+}
+.stat-wrapper{
+	margin-left: 10px;
+}
+.greenColor,.redColor,.blueColor,.yellowColor{
+	width: 60px;
+	height: 45px;
+	margin-left:75px;
+}
+.greenColor{
+	background-color: #43b29e;
+}
+.redColor{
+	background-color: #d04b36;
+}
+.blueColor{
+	background-color: #388ac1;
+}
+.yellowColor{
+	background-color: #e2cd46;
+}
+
+.panel .panel-heading{
+	color:#aaaaaa;
+}
+
+/*first project*/
+.right_Col > .panel{
+	height: 350px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top:10px;
+	margin-bottom: 0px;
+
+}
+.left_panel{
+	width: 530px;
+	margin-left: 60px;
+}
+.left_panel > .panel-heading p{
+	font-family: SimHei;
+	font-size: 12px;
+}
+.left_panel > .panel-body li a{
+	width: 85px;
+	background-color: #ededf0;
+	margin-left: 5px;
+	height: 30px;
+	border-radius:5px 5px 0 0 ;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color:#535353;
+}
+.left_panel > .panel-body li a:nth-child(1){
+	margin-left: 0px;
+}
+.left_panel > .panel-body li:nth-child(1){
+	position: relative;
+	z-index:3;
+
+}
+.left_panel > .panel-body .grid_Form{
+	margin-top: -1px;
+	width: 500px;
+	height: 250px;
+	border:1px solid #d7d8d8;
+	z-index: 2;
+	position: absolute;
+}
+.grid_Form table{
+	margin:0 auto;
+	margin-top:30px;			        		
+}
+.grid_Form table th,td{
+	border: 1px solid #d7d8d8;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+}
+/*second project*/
+.right_panel{
+	width: 350px;
+	margin-left: 10px;
+}
+.details p{
+	margin-left: 50px;
+}
+.details > div:nth-child(3){
+	width: 95px;
+	height: 45px;
+	border:1px solid #d7d8d8;
+	border-left: 0;
+	margin-left: 30px;
+	float: left;
+	margin-top:10px;
+}
+.details > div:nth-child(3) p{
+	margin-left: 20px;
+}
+.details > div:nth-child(4){
+	width: 185px;
+	height: 45px;
+	border:1px solid #d7d8d8;
+	border-left: 0;border-right: 0;
+	margin-top:10px;
+	float: left;
+}
+.details > div:nth-child(5){
+	margin-top:65px; 
+	height: 145px;
+}	
+.details >div:nth-child(6){
+	margin-left: 30px;
+	border-top: 1px solid #d7d8d8;
+	width: 280px;
+	padding-top:10px;
+}
+.btn-primary{
+	background-color: #388ac1;
+	width: 50px;
+	height: 25px;
+	font-size: 12px;
+	line-height: 0px;
+	text-align: center;
+	float: right;
+}
+.details input{
+	vertical-align: middle;
+	margin:0px;
+}
+/*calender*/
+.calender{
+	width: 350px;
+	margin-left: 60px;
+	color:#535353;
+	font-size: 12px;
+	font-family: SimHei;
+}
+.calender .date-container{
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+}
+.date-container select{
+	margin-right: 7px;
+	border:1px solid #cacbcb;
+}
+.date-container > div:nth-child(3){
+	width: 20px;
+	height: 20px;
+	border:1px solid #cacbcb;
+	margin-left: 0px;
+	border-left: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.date-container > div:nth-child(3) img{
+	transform:rotateY(180deg);
+	width: 5px;height: 10px;
+}
+.date-container > div:nth-child(5){
+	border:1px solid #cacbcb;
+	text-align: center;
+}
+.calender table{
+	margin:0 auto;
+	margin-top: 10px;
+	border-collapse:separate; border-spacing:0px 5px;
+}
+.calender  table .date td{
+	width: 45px;
+	text-align: center;
+	border:none;
+	border-top:1px solid #a9cfec;
+	border-bottom: 1px solid #cacbcb;
+}
+.calender table .number td{
+	border:none;
+}
+.calender table .number tr{
+	margin-top: 5px;
+}
+/*rank*/
+.rank{
+	width: 530px;
+	margin-left: 10px;
+}
+.rank > .panel-body{
+	display: flex;
+	/*justify-content: center;*/
+	font-family: SimHei;
+	font-size: 13px;
+	color:#231815;
+}
+.rank .rank-top th{
+	border: 1px solid #cacbcb;
+	height: 30px;
+}
+.rank table tr{
+	height: 20px;
+}
+.rank > .panel-body tr td:nth-child(3){
+	padding-left: -10px;
+}
+
+
