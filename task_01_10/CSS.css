@@ -1,0 +1,51 @@
+*{
+	padding: 20px;
+}
+.box_A{
+	width: 150px;
+	height: 120px;
+	border:1px solid #f00;
+}
+.box_B{
+	width: 150px;
+	height: 100px;
+	border:1px solid #f00;
+}
+.box_C{
+	width: 150px;
+	height: 40px;
+	border:1px solid #f00;
+}
+.box_D{
+	width: 150px;
+	height: 200px;
+	border:1px solid #0f0;
+}
+.flex{
+	width: 100%;
+	height: 300px;
+	border:1px solid black;
+	margin:0 auto;
+}
+@media screen and (min-width: 640px){
+	.flex{
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+}
+@media screen and (max-width: 640px){
+	.flex{
+		flex-wrap: wrap;
+		display: inline-flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.box_D{
+		order:-1;
+	}
+	.box_C{
+		order:1;
+	}
+}
