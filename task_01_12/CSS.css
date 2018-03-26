@@ -1,0 +1,90 @@
+*{
+	margin: 0 auto;
+}
+/*body{
+	text-align: center;
+}*/
+td{
+	border:1px solid white;
+}
+tr:nth-child(odd){
+	background-color: #cccccc;
+}
+tr:nth-child(1){
+	background-color: black;
+	color:white;
+}
+tr:nth-child(2),tr:nth-child(3),tr:nth-child(4){
+	color:red;
+}
+form{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+form #A:focus{
+	width: 200px;
+	border:3px solid #7aaff1;
+}
+
+form #A{
+	width: 100px;
+	transition: width 2s;
+}
+
+
+.frame{
+	width: 250px;
+	height: 150px;
+	overflow: hidden;
+	border:1px solid black;
+	position: relative;
+}
+#pics{
+	width: calc(250px * 5);
+	height: 150px;
+	z-index: 10;
+}
+#pics img{
+	width: 250px;
+	height: 150px;
+	float:left;
+	display: inline-block;
+}
+
+#a1:focus ~ #pics{animation: ma1 .5s ease-out forwards;}  
+#a2:focus ~ #pics{animation: ma2 .5s ease-out forwards;}  
+#a3:focus ~ #pics{animation: ma3 .5s ease-out forwards;}  
+#a4:focus ~ #pics{animation: ma4 .5s ease-out forwards;}  
+#a5:focus ~ #pics {animation: ma5 .5s ease-out forwards;}   
+@keyframes ma1 {100%{margin-left:-0px;} }  
+@keyframes ma2 {0%{margin-left:-250px;} 100%{margin-left:-250px;}   }  
+@keyframes ma3 {0%{margin-left:-500px;} 100%{margin-left:-500px;}   }  
+@keyframes ma4 {0%{margin-left:-750px;} 100%{margin-left:-750px;}   }  
+@keyframes ma5 {0%{margin-left:-1000px;} 100%{margin-left:-1000px;}  } 
+
+.frame a{
+	position: absolute;
+	z-index: 11;
+	right:0px;
+	bottom: 0px;
+	background-color: red;
+	width: 20px;
+	border-radius: 100%;
+	text-align: center;
+	opacity: 0.6;
+	color:#FFFFFF;
+}
+.frame a:nth-child(4){
+	margin-right: 30px;
+}
+.frame a:nth-child(3){
+	margin-right: 60px;
+}
+.frame a:nth-child(2){
+	margin-right: 90px;
+}
+.frame a:nth-child(1){
+	margin-right: 120px;
+}
+
