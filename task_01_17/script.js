@@ -50,44 +50,123 @@ window.onload=function(){
     nowGraTime: "day"
   }
 
-  /**
-   * 渲染图表
+chartData=aqiSourceData["北京"];
+ /**
+   * 处理不同高度的颜色变化
    */
-
-  function renderChart(){
-    var chart=document.createElement("div");
-    document.getElementById("aqi-chart-wrap").appendChild(chart);
-    chart.style.width="2000px";
-    chart.style.height="100%";
-    chart.style.margin="0px auto";
-    //遍历某一个城市的数据对象，并将数据输出    
-    for(key in aqiSourceData['北京']){
-      var bar=document.createElement("div");
-      var h=aqiSourceData['北京'][key]+"px";
-      bar.style.height=h;
-      bar.style.width="10px";bar.style.display="inline-block";
-      bar.style.backgroundColor="red";
-      bar.style.border="1px solid white";
-      chart.appendChild(bar);
+  function getColor(h_num,bar,avg){
+    var test=(h_num-avg)/avg;
+    if(test>0.2){
+      bar.style.backgroundColor="#000000";
     }
-  }
-renderChart();
+    else if(test<=0.2&&test>0.1){
+      bar.style.backgroundColor="#7b037e";
+    }
+    else if(test<=0.1&&test>-0.1){
+      bar.style.backgroundColor="#e90c04";
+    }
+    else if(test<=-0.1&&test>-0.2){
+      bar.style.backgroundColor="#0201ff";
+    }
+    else{
+      bar.style.backgroundColor="#007b0e";
+    }
+  }  
   /**
    * 日、周、月的radio事件点击时的处理函数
    */
   function graTimeChange() {
     // 确定是否选项发生了变化 
     var btns=document.getElementById('form-gra-time');
-    btns.addEventListener('click',function(event){
-      if(event.target.checked=="checked"){
-        console.log("AAA");
-      }
-      
-    })
-    // 设置对应数据
+    var wrap=document.getElementById("aqi-chart-wrap");
+    wrap.innerHTML="";
+    // 求平均值
+    var sum=0;
+    for(var key in chartData){
+      sum+=chartData[key];
+    }
+    var avg=sum/91;
+    // 判断
+    if(btns.childNodes[3].childNodes[1].checked==true&&btns.childNodes[3].childNodes[1].value=="day"){
+      console.log("days");
+      var chart=document.createElement("div");
+      chart.id="bars";
+      for(key in chartData){
+        var bar=document.createElement("div");
+        var h_num=chartData[key];
+        var h=chartData[key]+"px";
 
-    // 调用图表渲染函数
-    renderChart();
+        getColor(h_num,bar,avg);
+        bar.style.height=h;
+        bar.style.width="10px";
+        wrap.appendChild(chart);
+        chart.appendChild(bar);
+      } 
+    } 
+    // day ends
+    else if(btns.childNodes[5].childNodes[1].checked==true&&btns.childNodes[5].childNodes[1].value=="week"){
+      console.log("week");
+      var chart=document.createElement("div");
+      chart.id="bars";
+      var count=0;
+      var h_num=0;
+      for(var key in chartData){
+        count+=1;
+        h_num+=chartData[key];
+        if(count==7){
+          var bar=document.createElement('div');
+          h_num/=7;
+          var h=h_num+"px";
+          getColor(h_num,bar,avg);
+          bar.style.height=h;
+          bar.style.width="30px";
+          wrap.appendChild(chart);
+          chart.appendChild(bar);
+          count=0;
+          h_num=0;
+        }
+      }
+    } 
+    // week ends
+    else if(btns.childNodes[7].childNodes[1].checked==true&&btns.childNodes[7].childNodes[1].value=="month"){
+      console.log('month');
+      var chart=document.createElement("div");
+      chart.id="bars";
+      var count=0;
+      var h_num=0;
+      for(var key in chartData){
+        count+=1;
+        h_num+=chartData[key];
+        if(count==30){
+          var bar=document.createElement('div');
+          h_num/=30;
+          var h=h_num+"px";
+          getColor(h_num,bar,avg);
+          bar.style.height=h;
+          bar.style.width="30px";
+          wrap.appendChild(chart);
+          chart.appendChild(bar);
+          count=0;
+          h_num=0;
+        }
+      }
+    }
+    // month ends
+  }
+  // graTimeChange();
+    /**
+   * 渲染图表
+   */
+  function renderChart(){
+    var bars=document.getElementById("bars");
+    bars.style.display="flex";
+    bars.style.justifyContent="center";
+    bars.style.alignItems="flex-end";
+    bars.style.height="100%";
+    var len=bars.childNodes.length;
+    for(var i=0;i!=len;i++){
+      bars.childNodes[i].style.border="1px solid white";
+    }
   }
   /**
    * select发生变化时的处理函数
@@ -104,9 +183,13 @@ renderChart();
    * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
    */
   function initGraTimeForm() {
-
+    var btns=document.getElementById('form-gra-time');
+    btns.addEventListener('click',function(){
+      graTimeChange();
+      renderChart();
+    })
   }
-
+initGraTimeForm()
   /**
    * 初始化城市Select下拉选择框中的选项
    */
@@ -122,6 +205,8 @@ renderChart();
   function initAqiChartData() {
     // 将原始的源数据处理成图表需要的数据格式
     // 处理好的数据存到 chartData 中
+    chartData={};
+    
   }
 
   /**
@@ -132,6 +217,5 @@ renderChart();
     initCitySelector();
     initAqiChartData();
   }
-
-  init();
+  // init();
 }  
