@@ -50,7 +50,6 @@ window.onload=function(){
     nowGraTime: "day"
   }
 
-chartData=aqiSourceData["北京"];
  /**
    * 处理不同高度的颜色变化
    */
@@ -86,11 +85,12 @@ chartData=aqiSourceData["北京"];
       sum+=chartData[key];
     }
     var avg=sum/91;
+
+    var chart=document.createElement("div");
+
     // 判断
     if(btns.childNodes[3].childNodes[1].checked==true&&btns.childNodes[3].childNodes[1].value=="day"){
       console.log("days");
-      var chart=document.createElement("div");
-      chart.id="bars";
       for(key in chartData){
         var bar=document.createElement("div");
         var h_num=chartData[key];
@@ -106,8 +106,6 @@ chartData=aqiSourceData["北京"];
     // day ends
     else if(btns.childNodes[5].childNodes[1].checked==true&&btns.childNodes[5].childNodes[1].value=="week"){
       console.log("week");
-      var chart=document.createElement("div");
-      chart.id="bars";
       var count=0;
       var h_num=0;
       for(var key in chartData){
@@ -130,8 +128,6 @@ chartData=aqiSourceData["北京"];
     // week ends
     else if(btns.childNodes[7].childNodes[1].checked==true&&btns.childNodes[7].childNodes[1].value=="month"){
       console.log('month');
-      var chart=document.createElement("div");
-      chart.id="bars";
       var count=0;
       var h_num=0;
       for(var key in chartData){
@@ -152,8 +148,15 @@ chartData=aqiSourceData["北京"];
       }
     }
     // month ends
+    chart.style.display="flex";
+    chart.style.justifyContent="center";
+    chart.style.alignItems="flex-end";
+    chart.style.height="100%";
+    var len=chart.childNodes.length;
+    for(var i=0;i!=len;i++){
+      chart.childNodes[i].style.border="1px solid white";
+    }
   }
-  // graTimeChange();
     /**
    * 渲染图表
    */
@@ -171,14 +174,21 @@ chartData=aqiSourceData["北京"];
   /**
    * select发生变化时的处理函数
    */
-  function citySelectChange() {
-    // 确定是否选项发生了变化 
-
-    // 设置对应数据
-
-    // 调用图表渲染函数
+  function citySelectChange(cities) {
+    var key;
+    if(cities.selectedIndex==0){
+      key=cities.childNodes[1].innerHTML;
+      console.log(key);
+      initAqiChartData(key);
+      graTimeChange();
+    }
+    else if(cities.selectedIndex==1){
+      key=cities.childNodes[3].innerHTML;
+      console.log(key);
+      initAqiChartData(key);
+      graTimeChange();
+    }
   }
-
   /**
    * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
    */
@@ -186,27 +196,30 @@ chartData=aqiSourceData["北京"];
     var btns=document.getElementById('form-gra-time');
     btns.addEventListener('click',function(){
       graTimeChange();
-      renderChart();
     })
   }
-initGraTimeForm()
+// initGraTimeForm()
   /**
    * 初始化城市Select下拉选择框中的选项
    */
   function initCitySelector() {
     // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
     // 给select设置事件，当选项发生变化时调用函数citySelectChange
-
+    var cities=document.getElementById('city-select');
+    cities.selectedIndex=pageState.nowSelectCity;
+    cities.addEventListener('click',function(){
+      citySelectChange(cities);
+    })
   }
-
   /**
    * 初始化图表需要的数据格式
    */
-  function initAqiChartData() {
+  function initAqiChartData(key) {
     // 将原始的源数据处理成图表需要的数据格式
     // 处理好的数据存到 chartData 中
     chartData={};
-    
+    chartData=aqiSourceData[key];
+    pageState.nowSelectCity=0;
   }
 
   /**
@@ -217,5 +230,5 @@ initGraTimeForm()
     initCitySelector();
     initAqiChartData();
   }
-  // init();
+  init();
 }  
