@@ -1,0 +1,22 @@
+button{
+	height:20px;
+	vertical-align: middle;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 0px;
+	border:1px solid #CAC6C6;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+form{
+	display: inline-block;
+}
+#btn_container{
+	display: inline-block;
+}
+#queue-wrap{
+	width: 1000px;
+	border:1px solid black;
+	height: 200px;
+}
