@@ -1,0 +1,9 @@
+#bar-wrap{
+	width: 1000px;
+	height: 200px;
+	margin:0 auto;
+	border:1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
