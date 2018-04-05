@@ -16,7 +16,7 @@
 */
 window.onload=function(){
 	var arr=[];
-
+	var arrText=[]
 //事件监听，获得tag文本内容
 	function getTagValue(){
 		var tag=document.getElementById('input');
@@ -83,7 +83,7 @@ window.onload=function(){
 				event.target.style.backgroundColor="red";
 			})
 			boxes[i].addEventListener('mouseout',function(){
-				event.target.innerHTML=event.target.innerHTML.substring(2);
+				event.target.innerHTML=event.target.innerHTML.substring(4);
 				event.target.style.backgroundColor="#879EF8";
 			})
 		}
@@ -101,6 +101,8 @@ window.onload=function(){
 			})
 		}
 	}
+
+
 //第二部分
 //处理text文本内容
 	function process(_input){
@@ -112,54 +114,53 @@ window.onload=function(){
 		return result;
 	}
 //去重
-	function delRepeat(arr){
-		var len=arr.length;
+	function delRepeat(arrText){
+		var len=arrText.length;
 		for(var i = 0; i < len; i++){
 			for(var j = i + 1; j < len; j++){
-				if(arr[i] == arr[j]){
-				    arr.splice(j,1);
+				if(arrText[i] == arrText[j]){
+				    arrText.splice(j,1);
 				    len--;
 				    j--;
 				}
 			}
 		}
 	}
-//事件监听，获得text文本内容(这里需要改成onclick)
+//事件监听，获得text文本内容
 	function getTextValue(){
-		var text=document.getElementById('text');
-		text.addEventListener('keydown',function(event){
+		var btn=document.getElementById('btn');
+		btn.addEventListener('click',function(event){
 			var text=document.getElementById('text');
-			if(event.keyCode==13||event.keyCode==188||event.keyCode==32){
-				text.value=myTrim(tag.value);
-				var toAdd=process(text.value);
-				arr.concat(toAdd);
+				text.value=myTrim(text.value);
+				var toAdd=process(text);
+				arrText=arrText.concat(toAdd);
 				//去重和判断不能超过10个
-				delRepeat(arr)
-				while(arr.length>10){
-					arr.shift();
+				delRepeat(arrText)
+				while(arrText.length>10){
+					arrText.shift();
 				}
-				console.log(arr);
-				generator();
+				console.log(arrText);
+				generatorForText();
 				text.value='';//清空
-			}
 		})
 	}
+	getTextValue()
 //根据队列生成图表
 	function generatorForText(){
 		//每次生成前都清空
-		var wrap=document.getElementById('text-wrap');
-		wrap.innerHTML="";
+		var text_wrap=document.getElementById('text-wrap');
+		text_wrap.innerHTML="";
 		//开始生成图表
-		for(var i=0;i!=arr.length;i++){
+		for(var i=0;i!=arrText.length;i++){
 			var box=document.createElement('div');
-			box.innerText=arr[i];
+			box.innerText=arrText[i];
 			render(box);
-			wrap.appendChild(box);
+			text_wrap.appendChild(box);
 		}
-		hangOver();
+		hangOver_2();
 	}
 //光标悬停效果
-	function hangOver(){
+	function hangOver_2(){
 		var boxes=document.getElementById('text-wrap').getElementsByTagName('div');
 		for(var i=0;i!=boxes.length;i++){
 			boxes[i].addEventListener('mouseenter',function(){
@@ -167,21 +168,21 @@ window.onload=function(){
 				event.target.style.backgroundColor="red";
 			})
 			boxes[i].addEventListener('mouseout',function(){
-				event.target.innerHTML=event.target.innerHTML.substring(2);
+				event.target.innerHTML=event.target.innerHTML.substring(4);
 				event.target.style.backgroundColor="#879EF8";
 			})
 		}
-		clickDel();	
+		clickDel_2();	
 	}
 //点击删除效果
-	function clickDel(){
+	function clickDel_2(){
 		var boxes=document.getElementById('text-wrap').getElementsByTagName('div');
 		for(var i=0;i!=boxes.length;i++){
 			boxes[i].addEventListener('click',function(){
-				console.log(i)
-				arr.splice(i-1,1);
-				console.log(arr);
-				generator();
+				// console.log(i)
+				arrText.splice(i-1,1);
+				// console.log(arrText);
+				generatorForText();
 			})
 		}
 	}	
