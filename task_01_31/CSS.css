@@ -1,0 +1,49 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+.wrap{
+	margin:0 auto;
+	width: 500px;height: 500px;
+	padding-top: 200px;
+}
+#school{
+	margin-left: 50px;
+}
+#social{
+	margin-left: 200px;
+}
+input{
+	display: inline-block;
+	vertical-align: middle;
+}
+p{
+	display: inline-block;
+	font-family: SimHei;
+	font-size: 15px;
+	vertical-align: middle;
+}
+#schoolAdd,#socialAdd{
+	margin-top: 20px;
+	margin-left: 20px
+}
+#schoolAdd #location{
+	margin-left: 20px;
+	width: 100px;
+}
+#schoolAdd #uni{
+	margin-left: 40px;
+	width: 200px;
+}
+#workplace,select{
+	border-radius: 5px;
+	border:0.5px solid #BCB6B6;
+	height: 25px;
+}
+#socialAdd,#schoolAdd{
+	display: none;
+}
+#socialAdd > #workplace{
+	margin-left: 20px;
+	width: 320px;
+}
